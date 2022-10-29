@@ -1,0 +1,19 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.825rem;
+  border-bottom: 0.1px solid #0fc94b;
+  padding: 1rem;
+}
+
+.header img {
+  width: 60px;
+  height: 60px;
+}
+
+.header h4 {
+  font-weight: 700;
+  font-size: 1.5rem;
+}
