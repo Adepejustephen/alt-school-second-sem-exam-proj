@@ -1,12 +1,19 @@
-import React from 'react'
-import { Header } from './components'
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import { Header, HomeUi } from "./components";
+import { StoreContextProvider } from "./context/AppContext";
 
 const App = () => {
   return (
-    <div>
-      <Header/>
-    </div>
-  )
-}
+    <StoreContextProvider>
+        <Header />
+      <Routes>
+        <Route exact path="/" element={ <HomeUi/>}/>
+       
+     </Routes>
+     
+    </StoreContextProvider>
+  );
+};
 
-export default App
+export default App;
