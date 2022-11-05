@@ -8,6 +8,7 @@
   border-radius: 4px;
   padding: 1rem 1.2rem;
   border: 0.85px solid #EEF3EF;
+  width: 100%;
   /* border: 0.1px solid #0fc94b; */
 }
 .profile__img {
@@ -31,14 +32,17 @@
   gap: .625rem;
   justify-content: center;
 }
+.followers {
+background: #F4E2F4;;
+}
 
 .profile__text span {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .profile__text p {
-    font-size: 1.2rem;
+    font-size: 1rem;
     display: flex;
     gap: .5rem;
     align-items: center;
@@ -58,4 +62,13 @@
  
   width: 50%;
   }
+  .profile__text span {
+    font-size: 1.5rem;
+}
+
+.profile__text p {
+    font-size: 1.2rem;
+   
+}
+
 }

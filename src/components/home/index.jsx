@@ -1,18 +1,16 @@
 import React from "react";
-import { useContext } from "react";
-import { Store} from "../../context/AppContext";
+
+
 import { Spinner } from "../generalComponents";
 import { ProfileCard } from "./profleCard";
-import './home.css'
+import "./home.css";
 
-export const HomeUi = () => {
-  const { FetchUser,  } = useContext(Store);
-  const { user, error, loading } = FetchUser();
+export const HomeUi = ({ user, error, loading }) => {
+  
 
-    
-     if (!loading && error) {
-         return <p>{ error}</p>;
-     }
+  if (!loading && error) {
+    return <p>{error}</p>;
+  }
 
   return (
     <div className="home">

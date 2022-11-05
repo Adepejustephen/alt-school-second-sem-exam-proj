@@ -1,7 +1,8 @@
-import React from 'react'
-import './profileCard.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import "./profileCard.css";
 
-export const ProfileCard = ({user}) => {
+export const ProfileCard = ({ user }) => {
   return (
     <div className="profile">
       <div className="profile__img">
@@ -24,16 +25,21 @@ export const ProfileCard = ({user}) => {
           <span>Location:</span>
           {user.location}
         </p>
-        <p className="profile__text--repos">
-          <span>Repositories:</span>
-          {user.public_repos}
+        <p className="profile__text--location">
+          <span>Join:</span>
+          {new Date(user.created_at).toLocaleDateString()}
         </p>
         <p className="profile__text--follow">
-          <span>Followers:</span> {user.followers} 
-          <span>Following:</span>
-          {user.following}
+          Followers:
+          <span className="followers">{user.followers} </span>
+          Following: <span>{user.following}</span>
+        </p>
+        <p className="profile__text--repos">
+          <span>Public_repositories:</span>
+          {user.public_repos}
+          <Link to="/my-repositories">Click to view</Link>
         </p>
       </div>
     </div>
   );
-}
+};

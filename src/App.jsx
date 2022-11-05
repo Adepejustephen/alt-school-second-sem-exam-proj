@@ -1,18 +1,21 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Header, HomeUi } from "./components";
-import { StoreContextProvider } from "./context/AppContext";
+import { Header } from "./components";
+import { Home } from "./pages/Home";
+import { SingleRepo } from "./pages/Repo";
+import { Repos } from "./pages/Repos";
 
 const App = () => {
   return (
-    <StoreContextProvider>
-        <Header />
+    <>
+      <Header />
       <Routes>
-        <Route exact path="/" element={ <HomeUi/>}/>
-       
-     </Routes>
-     
-    </StoreContextProvider>
+        <Route exact path="/" element={<Home />} />
+        <Route exact path="/my-repositories" element={<Repos />}>
+          <Route path="/my-repositories/:id" element={<SingleRepo />} />
+        </Route>
+      </Routes>
+    </>
   );
 };
 

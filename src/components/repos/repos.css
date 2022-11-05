@@ -1,0 +1,38 @@
+.repos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  gap: 4rem;
+  padding: 2rem 1.25rem;
+}
+
+.repos__list {
+  display: grid;
+  gap: 1.875rem;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 600px) {
+  .repos {
+    padding: 0 3.5rem;
+    grid-template-columns: 1fr 1fr;
+  }
+  .repos__list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .repos {
+    padding: 0 5rem;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .repos {
+    padding: 0 7.5rem;
+  }
+  .repos__list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

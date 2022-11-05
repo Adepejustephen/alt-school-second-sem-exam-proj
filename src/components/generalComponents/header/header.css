@@ -3,9 +3,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 0.725rem;
+
   border-bottom: 0.1px solid #0fc94b;
-  padding: 1rem;
+  padding: 1rem 1rem  0.625rem 1rem;
 }
 
 .header img {
