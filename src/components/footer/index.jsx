@@ -13,8 +13,17 @@ export const Footer = () => {
         width: "100%",
       }}
     >
-      &#169;
-      {year} <span></span>Ifeoluwa Adepeju
+      <p
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: ".875rem"
+        }}
+      >
+        {" "}
+        &#169;
+        {year} <span></span>Ifeoluwa Adepeju
+      </p>
     </div>
   );
 }
