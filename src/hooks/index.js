@@ -63,32 +63,23 @@ export function FetchRepos() {
   
 
   useEffect(() => {
- 
     if (!url) return;
-
-
 
     const fetchData = async () => {
       dispatch({ type: Actions.LOADING });
 
-   
       try {
         const { data } = await axios.get(url + "/repos");
 
-     
-
         dispatch({ type: Actions.FETCHED_REPOS, payload: data });
       } catch (error) {
-       
-
         dispatch({ type: Actions.GET_ERROR, payload: error });
       }
     };
 
     fetchData();
-
-   
-  }, []);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [url]);
 
   return state;
 }

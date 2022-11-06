@@ -13,7 +13,9 @@ export const ReposUi = ({ repos, error, loading }) => {
   const currentRepos = repos.slice(indexOfFirstRepo, skip);
   const pages = repos.length / PER_PAGE;
 
-  console.log(repos);
+if (!loading && error) {
+  return <p>{error}</p>;
+}
 
   return (
     <div className="repos">
@@ -21,38 +23,45 @@ export const ReposUi = ({ repos, error, loading }) => {
         <Spinner />
       ) : (
         <>
-          <div className="repos__list">
-            {currentRepos.map((item) => {
-              return <RepoCard key={item.id} name={item.name} id={item.name} />;
-            })}
-          </div>
-          <div className="btns">
-            <button
-              disabled={page <= 1}
-              onClick={() => setPage((prev) => prev - 1)}
-            >
-              prev
-            </button>
-            {Array.from({ length: pages }, (value, index) => index + 1).map(
-              (each, id) => (
-                <button onClick={() => setPage(each)} key={id}>
-                  {each}
-                </button>
-              )
-            )}
-            {
+          <div className="repos__container">
+            <div className="repos__list">
+              {currentRepos.map((item) => {
+                return (
+                  <RepoCard key={item.id} name={item.name} id={item.name} />
+                );
+              })}
+            </div>
+            <div className="btns">
               <button
-                disabled={page >= pages}
-                aria-disabled={page >= pages}
-                onClick={() => setPage((prev) => prev + 1)}
+                disabled={page <= 1}
+                onClick={() => setPage((prev) => prev - 1)}
               >
-                next
+                prev
               </button>
-            }
+              {Array.from({ length: pages }, (value, index) => index + 1).map(
+                (each, id) => (
+                  <button
+                    onClick={() => setPage(each)}
+                    key={id}
+                    disabled={page === each}
+                  >
+                    {each}
+                  </button>
+                )
+              )}
+              {
+                <button
+                  disabled={page >= pages}
+                  aria-disabled={page >= pages}
+                  onClick={() => setPage((prev) => prev + 1)}
+                >
+                  next
+                </button>
+              }
+            </div>
           </div>
         </>
       )}
-
       <Outlet />
     </div>
   );

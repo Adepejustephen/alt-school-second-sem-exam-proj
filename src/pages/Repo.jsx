@@ -1,10 +1,6 @@
-import React from 'react'
-import { RepoUI } from '../components'
-import { FetchRepos } from '../hooks';
+import React from "react";
+import { RepoUI } from "../components";
 
 export const SingleRepo = () => {
-    const { repos, error, loading } = FetchRepos();
-  return (
-    <div><RepoUI repos={repos}/></div>
-  )
-}
+  return <RepoUI />;
+};

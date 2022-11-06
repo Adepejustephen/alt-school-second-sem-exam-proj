@@ -1,0 +1,60 @@
+.repoDetails {
+  box-shadow: 0px 0px 3px 0px #0fc94b, 0px 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 1rem;
+  /* width: 100%; */
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .8rem;
+}
+
+.repoDetails__title {
+  font-size: 1.5rem;
+}
+
+.repoDetails__lang {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.repoDetails__lang span {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #1f1d1e;
+}
+p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+
+p span {
+ font-weight: 600;
+  font-size: 0.875rem;
+  color: #1f1d1e;   
+}
+
+.circle__yellow,
+.circle__purple,
+.circle__blue {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+}
+
+.circle__blue {
+  background-color: rgb(42, 127, 230);
+}
+.circle__yellow {
+  background-color: yellow;
+}
+
+.circle__purple {
+  background-color: rgb(228, 79, 156);
+}

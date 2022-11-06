@@ -1,0 +1,18 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.btn {
+    border: none;
+    background-color: #0fc94b;
+    border-radius: .5rem;
+    padding: 1rem;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;    
+}
