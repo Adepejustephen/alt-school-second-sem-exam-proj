@@ -21,8 +21,8 @@ class ErrorBoundary extends React.Component {
       // You can render any custom fallback UI
       return (
         <>
-          <h2>Oops. Be like say dem no write this code well.</h2>
-          <p>No vex. You fit rason this page later</p>
+          <h2>Oops. Something went wrong</h2>
+          <p>Our team of developers will look into this</p>
         </>
       );
     }

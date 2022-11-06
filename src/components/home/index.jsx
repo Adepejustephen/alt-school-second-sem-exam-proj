@@ -1,6 +1,7 @@
 import React from "react";
 
 
+
 import { Spinner } from "../generalComponents";
 import { ProfileCard } from "./profleCard";
 import "./home.css";
@@ -17,6 +18,8 @@ export const HomeUi = ({ user, error, loading }) => {
     <div className="home">
       <Helmet title={user.name} desc={user.bio} />
       {loading ? <Spinner /> : <ProfileCard user={user} />}
+
+     
     </div>
   );
 };

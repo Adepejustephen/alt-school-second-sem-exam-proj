@@ -42,10 +42,14 @@ export const ProfileCard = ({ user }) => {
           {user.public_repos}
         </p>
 
-        <Link to="/my-repositories">
-      
-          <button className="profile-btn"> View Repositories </button>
-        </Link>
+        <div className="profile__btns">
+          <Link to="/my-repositories">
+            <button className="profile-btn"> View Repositories </button>
+          </Link>
+          <Link to="/error">
+            <button className="profile-btn2"> check Erorr</button>
+          </Link>
+        </div>
       </div>
     </div>
   );

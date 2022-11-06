@@ -48,6 +48,14 @@
     align-items: flex-start;
 }
 
+.profile__btns {
+  display: flex;
+  gap: .825rem;
+  align-items: flex-end;
+   margin-top: 1rem;
+}
+
+
 .profile-btn {
   display: flex;
   background-color: #f6970e;
@@ -57,7 +65,16 @@
   outline: none;
   pointer-events: none;
   border-radius: 4px;
-  margin-top: 1rem;
+ 
+}
+
+.profile-btn2{
+  background: none;
+  border: none;
+  outline: none;
+  pointer-events: none;
+  font-weight: 700;
+   padding: .5rem;
 }
 
 @media screen and (min-width: 600px) {
