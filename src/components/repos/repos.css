@@ -2,11 +2,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* justify-content: center; */
+  position: absolute;
   min-height: 100vh;
   height: 100%;
   gap: 2rem;
   padding: 2rem 1.25rem;
+  position: relative;
+}
+
+.return-btn {
+  position: absolute;
+  bottom: .825rem;
+  right: 4rem;
+  background-color: #0FC94B;
+  color: #fff;
+  font-size: .825rem;
+  padding: .8rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 4px;
 }
 
 .repos__container {

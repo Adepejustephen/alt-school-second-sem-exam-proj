@@ -1,10 +1,12 @@
 import React, { useState } from "react";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
+import { Helmet } from "../../helpers";
 import { Spinner } from "../generalComponents";
 import { RepoCard } from "./repoCard";
 import "./repos.css"
 
 export const ReposUi = ({ repos, error, loading }) => {
+  const navigate=useNavigate()
 
   const [page, setPage] = useState(1);
   const PER_PAGE = 6;
@@ -19,11 +21,15 @@ if (!loading && error) {
 
   return (
     <div className="repos">
+      <Helmet title="repositories" desc={""} />
       {loading ? (
         <Spinner />
       ) : (
         <>
           <div className="repos__container">
+            <button className="return-btn" onClick={() => navigate("/")}>
+              Return home
+            </button>
             <div className="repos__list">
               {currentRepos.map((item) => {
                 return (

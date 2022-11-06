@@ -1,5 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { Helmet } from "../../helpers";
 import { FetchRepos } from "../../hooks";
 import { Spinner } from "../generalComponents";
 import "./repodetails.css";
@@ -18,10 +19,10 @@ export const RepoUI = () => {
     <>
       {loading ? (
         <Spinner />
-      ) : (
-        <div className="repoDetails">
+        ) : (
+          <div className="repoDetails">
+          <Helmet title={repo.name} desc={`main lang : ${repo.language}`} />
           <h4 className="repoDetails__title">{repo.name}</h4>
-          {console.log({ repo: repo.language })}
 
           {repo.language !== null && (
             <p className="repoDetails__lang">

@@ -10,6 +10,14 @@
   gap: .8rem;
 }
 
+/* .loading_repo {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+} */
+
 .repoDetails__title {
   font-size: 1.5rem;
   border-bottom: solid 2px #0fc94b;
