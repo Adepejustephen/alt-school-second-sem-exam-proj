@@ -30,15 +30,20 @@ export const ProfileCard = ({ user }) => {
           {new Date(user.created_at).toLocaleDateString()}
         </p>
         <p className="profile__text--follow">
-          Followers:
-          <span className="followers">{user.followers} </span>
-          Following: <span>{user.following}</span>
+          {user.followers}
+          <span className="followers">Followers:</span>
+        </p>
+        <p>
+          <span>Following:</span>
+          {user.following}
         </p>
         <p className="profile__text--repos">
-          <span>Public_repositories:</span>
+          <span>Public repositories:</span>
           {user.public_repos}
-          <Link to="/my-repositories">Click to view</Link>
         </p>
+        <button className="btn">
+          <Link to="/my-repositories"> View Repositories</Link>
+        </button>
       </div>
     </div>
   );

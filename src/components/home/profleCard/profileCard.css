@@ -25,27 +25,37 @@
 
 .profile__text {
   background-color: #E1F5E7;
-  color: #1F1D1E;
+  color: #022a5d;
   padding: .5rem 1.2rem;
   display: flex;
   flex-direction: column;
   gap: .625rem;
   justify-content: center;
 }
-.followers {
-background: #F4E2F4;;
-}
+
 
 .profile__text span {
     font-weight: 700;
     font-size: 1.2rem;
+    color: #1F1D1E;
 }
 
 .profile__text p {
     font-size: 1rem;
     display: flex;
+    flex-direction: column;
     gap: .5rem;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.btn {
+  display: flex;
+  background-color: #f6970e;
+  padding: .5rem;
+  border: none;
+  font-weight: 700;
+  outline: none;
+  pointer-events: none;
 }
 
 @media screen and (min-width: 600px) {
@@ -68,6 +78,8 @@ background: #F4E2F4;;
 
 .profile__text p {
     font-size: 1.2rem;
+    flex-direction: row;
+    align-items: center;
    
 }
 
