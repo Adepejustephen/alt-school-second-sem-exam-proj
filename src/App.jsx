@@ -1,6 +1,6 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import { Header } from "./components";
+import { Footer, Header } from "./components";
 import { Page404Ui } from "./components/404";
 import { Home } from "./pages/Home";
 import { SingleRepo } from "./pages/Repo";
@@ -17,6 +17,7 @@ const App = () => {
         </Route>
         <Route exact path="*" element={<Page404Ui />} />
       </Routes>
+      <Footer/>
     </>
   );
 };

@@ -13,8 +13,8 @@
  display: flex;
   flex-direction: column;
   align-items: center;
-
   gap: 4rem;
+  width: 100%;
 }
 
 .repos__list {
@@ -71,12 +71,14 @@ transition: box-shadow .3s ease-in-out;
     /* justify-content: center; */
   }
 
+  .repos__container {
+
+  align-items: flex-start;
+}
+
 }
 @media screen and (min-width: 1300px) {
   .repos {
     padding: 3rem 7.5rem;
-  }
-  .repos__list {
-    
   }
 }

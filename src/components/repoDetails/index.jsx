@@ -3,20 +3,14 @@ import { useParams } from "react-router-dom";
 import { FetchRepos } from "../../hooks";
 import { Spinner } from "../generalComponents";
 import "./repodetails.css";
-// {
-//   repos, error, loading;
-// }
+
 
 export const RepoUI = () => {
   const { id } = useParams();
   const { repos, error, loading } = FetchRepos();
 
   const repo = repos.find((repo) => repo.name === id);
-  // const language = {
-  //   javascript: "JavaScript",
-  // typescript: "TypeScript"
-  // }
-
+ 
   if (!loading && error) {
     return <p>{error}</p>;
   }

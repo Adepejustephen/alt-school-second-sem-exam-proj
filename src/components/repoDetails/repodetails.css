@@ -3,8 +3,8 @@
     0px 10px 15px -3px rgba(0, 0, 0, 0.1);
   border-radius: 4px;
   padding: 1rem;
-  /* width: 100%; */
-  min-height: 100%;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: .8rem;
@@ -12,6 +12,11 @@
 
 .repoDetails__title {
   font-size: 1.5rem;
+  border-bottom: solid 2px #0fc94b;
+  border-left: solid 2px #0fc94b;
+  padding-inline-start: 5px;
+  border-bottom-left-radius: 10px;
+  width: max-content;
 }
 
 .repoDetails__lang {
@@ -36,7 +41,7 @@ p {
 
 p span {
  font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 1rem;
   color: #1f1d1e;   
 }
 

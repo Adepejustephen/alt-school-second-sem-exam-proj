@@ -25,7 +25,7 @@ export const ProfileCard = ({ user }) => {
           <span>Location:</span>
           {user.location}
         </p>
-        <p className="profile__text--location">
+        <p className="profile__text--join">
           <span>Join:</span>
           {new Date(user.created_at).toLocaleDateString()}
         </p>
